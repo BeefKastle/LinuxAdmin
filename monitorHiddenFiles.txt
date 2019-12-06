@@ -1,0 +1,8 @@
+Configuring rules for auditd
+
+The configuration files for audit are found under /etc/audit
+In the rules.d directory there is a file called audit.rules (/etc/audit/rules.d/audit.rules)
+This file stores the files that are being watched.
+I added four lines to watch the passwd, shadow, hosts, and group files in /etc.
+These events get loged in /var/log/audit/audit.log and events with those files are tagged with a unique key so they are easier to find.
+The log can be searched through and user action, and time can be determined
